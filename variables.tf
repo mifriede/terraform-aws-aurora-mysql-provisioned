@@ -34,6 +34,11 @@ variable "cluster_parameter_group_parameters" {
   description = "Cluster parameter group resource parameters"
   default = [
     {
+      name         = "max_connections"
+      value        = 16000
+      apply_method = "immediate"
+    },
+    {
       name         = "character_set_server"
       value        = "utf8mb4"
       apply_method = "immediate"
